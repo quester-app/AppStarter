@@ -1,7 +1,7 @@
-import React, {memo, useEffect, useMemo, useState} from 'react';
+import React, {memo, useMemo, useState} from 'react';
 import {StyleSheet} from 'react-native';
 
-import {View} from '~/Components';
+import View from '~/Components/View/View';
 import {createContext} from '~/Utils/createContext';
 
 type Props = {
@@ -18,26 +18,7 @@ type PortalType = {
   children?: React.ReactNode;
 };
 
-type PortalProps = {children?: React.ReactNode};
-
 const [useContext, Provider] = createContext<Context>();
-
-export const Portal = memo(
-  (props: PortalProps): React.ReactElement => {
-    const {children} = props;
-    const {addPortal, removePortal} = useContext();
-
-    useEffect(() => {
-      const key = addPortal(children);
-
-      return () => {
-        removePortal(key);
-      };
-    }, [addPortal, children, removePortal]);
-
-    return <></>;
-  },
-);
 
 let key = 0;
 

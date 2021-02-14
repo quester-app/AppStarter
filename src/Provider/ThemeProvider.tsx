@@ -1,8 +1,9 @@
+import AsyncStorage from '@react-native-community/async-storage';
 import {Theme as NavigationTheme} from '@react-navigation/native';
 import React, {useEffect, useMemo, useState} from 'react';
 import {Appearance, ColorSchemeName} from 'react-native';
 
-import {Dark, Light, ThemeType} from '~/Constants';
+import {Dark, Light, THEME_PERSISTENCE_KEY, ThemeType} from '~/Constants';
 import {createContext} from '~/Utils/createContext';
 
 type Props = {
@@ -33,10 +34,19 @@ const ThemeProvider = (props: Props): React.ReactElement => {
   const [theme, setTheme] = useState<NavigationTheme>(changeTheme(themeType));
 
   useEffect(() => {
-    const colorScheme = Appearance.getColorScheme();
-    const type =
-      colorScheme === ThemeType.Dark ? ThemeType.Dark : ThemeType.Light;
-    setThemeType(type);
+    const fetchTheme = async () => {
+      let colorScheme = (await AsyncStorage.getItem(
+        THEME_PERSISTENCE_KEY,
+      )) as ColorSchemeName;
+
+      if (!colorScheme) {
+        colorScheme = Appearance.getColorScheme();
+      }
+
+      const type =
+        colorScheme === ThemeType.Dark ? ThemeType.Dark : ThemeType.Light;
+      setThemeType(type);
+    };
 
     const changeListener = ({colorScheme}: {colorScheme: ColorSchemeName}) => {
       const type =
@@ -45,6 +55,7 @@ const ThemeProvider = (props: Props): React.ReactElement => {
       setTheme(changeTheme(type));
     };
     Appearance.addChangeListener(changeListener);
+    fetchTheme();
 
     return () => {
       Appearance.removeChangeListener(changeListener);
