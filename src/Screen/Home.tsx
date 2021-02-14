@@ -1,12 +1,11 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {memo} from 'react';
-import {ActivityIndicator, Button} from 'react-native';
+import React from 'react';
+import {Button} from 'react-native';
 
-import {BackdropView, Text, View} from '~/Components';
+import {BackgroundLoader, Portal, Text, View} from '~/Components';
 import {RootStack} from '~/Constants';
 import {Posts} from '~/Constants/API';
 import {Post} from '~/Models';
-import {Portal} from '~/Provider';
 import {fetchFunction} from '~/Utils/API';
 import {usePromiseEffect} from '~/Utils/Hooks';
 
@@ -36,22 +35,6 @@ export default (): React.ReactElement => {
     [],
   );
 
-  const PortalItem = memo(
-    (): React.ReactElement => (
-      <BackdropView>
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <ActivityIndicator size="large" />
-          <Text xLarge>Loading</Text>
-        </View>
-      </BackdropView>
-    ),
-  );
-
   return (
     <>
       {global.HermesInternal == null ? null : (
@@ -59,18 +42,18 @@ export default (): React.ReactElement => {
           <Text>Engine: Hermes</Text>
         </View>
       )}
-      <View style={{paddingHorizontal: 20}} fill>
+      <View style={{paddingHorizontal: 20}} fill scroll>
         {isLoading && (
           <Portal>
-            <PortalItem />
+            <BackgroundLoader />
           </Portal>
         )}
         {!isLoading && (
           <>
             {error && <Text>{error}</Text>}
-            {posts?.map((post) => (
+            {posts?.splice(0, 5)?.map((post, index) => (
               <View key={post.id}>
-                <Text>{post.title}</Text>
+                <Text small>{`${index + 1}. ${post.title}`}</Text>
                 <Text light xSmall>
                   {post.body}
                 </Text>

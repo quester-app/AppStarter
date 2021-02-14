@@ -44,6 +44,7 @@
 		79D019CB47474A44AC0EFAC4 /* roboto-v20-latin-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F04B5C4F4A45BB8072AB28 /* roboto-v20-latin-regular.ttf */; };
 		1B769A3AAE344F01A0E9CDB1 /* roboto-v20-latin-regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 04D0F69967164A45B8B8C6AB /* roboto-v20-latin-regular.woff */; };
 		5D5E330BC87A4AA5BE8F7221 /* roboto-v20-latin-regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1D70664C93B540B9BBBB9D17 /* roboto-v20-latin-regular.woff2 */; };
+		6DD24C09B9A448E3BFFB5FA8 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB307F3B4174906B7905952 /* SplashScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		12F04B5C4F4A45BB8072AB28 /* roboto-v20-latin-regular.ttf */ = {isa = PBXFileReference; name = "roboto-v20-latin-regular.ttf"; path = "../src/Assets/Fonts/roboto-v20-latin-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		04D0F69967164A45B8B8C6AB /* roboto-v20-latin-regular.woff */ = {isa = PBXFileReference; name = "roboto-v20-latin-regular.woff"; path = "../src/Assets/Fonts/roboto-v20-latin-regular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1D70664C93B540B9BBBB9D17 /* roboto-v20-latin-regular.woff2 */ = {isa = PBXFileReference; name = "roboto-v20-latin-regular.woff2"; path = "../src/Assets/Fonts/roboto-v20-latin-regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEB307F3B4174906B7905952 /* SplashScreen.storyboard */ = {isa = PBXFileReference; name = "SplashScreen.storyboard"; path = "AppStarter/SplashScreen.storyboard"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = file.storyboard; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EEB307F3B4174906B7905952 /* SplashScreen.storyboard */,
 			);
 			name = AppStarter;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				79D019CB47474A44AC0EFAC4 /* roboto-v20-latin-regular.ttf in Resources */,
 				1B769A3AAE344F01A0E9CDB1 /* roboto-v20-latin-regular.woff in Resources */,
 				5D5E330BC87A4AA5BE8F7221 /* roboto-v20-latin-regular.woff2 in Resources */,
+				6DD24C09B9A448E3BFFB5FA8 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

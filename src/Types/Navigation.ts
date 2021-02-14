@@ -8,6 +8,8 @@ export type RootStackParamList = {
   [RootStack.Page2]: undefined;
   [RootStack.IdentityVerification]: undefined;
   [RootStack.Chatbot]: undefined;
+} & {
+  [P in keyof typeof RootStack]: undefined;
 };
 
 export type RootStackNavigationProps<

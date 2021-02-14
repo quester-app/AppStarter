@@ -1,5 +1,7 @@
-import React from 'react';
-import {LogBox, StatusBar} from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
+import React, {useEffect, useState} from 'react';
+import {LogBox} from 'react-native';
+import {enableScreens} from 'react-native-screens';
 
 import {RootView} from '~/Components';
 import RootNavigator from '~/Navigation/RootNavigator';
@@ -13,13 +15,34 @@ LogBox.ignoreLogs([
   'componentWillMount',
 ]);
 
-export default (): React.ReactElement => (
-  <>
-    <StatusBar barStyle="dark-content" />
+enableScreens();
+
+export default (): React.ReactElement | null => {
+  const [isReady, setIsReady] = useState(false);
+
+  const restoreState = async () => {
+    //
+  };
+
+  useEffect(() => {
+    const prepareResources = async () => {
+      try {
+        await restoreState();
+      } finally {
+        setIsReady(true);
+      }
+    };
+
+    SplashScreen.preventAutoHideAsync().finally(() => prepareResources());
+  }, []);
+
+  if (!isReady) return null;
+
+  return (
     <RootProvider>
       <RootView>
         <RootNavigator />
       </RootView>
     </RootProvider>
-  </>
-);
+  );
+};

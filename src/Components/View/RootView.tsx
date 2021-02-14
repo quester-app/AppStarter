@@ -1,4 +1,5 @@
 import React from 'react';
+import {StatusBar} from 'react-native';
 
 import View from '~/Components/View/View';
 
@@ -10,10 +11,13 @@ export default (props: Props): React.ReactElement => {
   const {children} = props;
 
   return (
-    <View collapsable={false} pointerEvents="box-none" fill safe>
-      <View fill keyboardAvoiding>
-        {children}
+    <>
+      <StatusBar barStyle="dark-content" />
+      <View collapsable={false} pointerEvents="box-none" fill safe>
+        <View fill keyboardAvoiding>
+          {children}
+        </View>
       </View>
-    </View>
+    </>
   );
 };

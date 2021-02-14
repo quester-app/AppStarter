@@ -17,6 +17,7 @@ export const colors = {
   lightBackgroundLight: '#f7f6f3',
   darkBackground: '#323739',
   darkBackgroundLight: '#393241',
+  splashBackground: '#F44336',
 };
 
 export const Light: ThemeColor = {
