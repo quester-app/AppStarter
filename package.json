@@ -9,7 +9,16 @@
     "test": "jest",
     "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx,js,jsx}\" --fix",
     "pod-install": "cd ios && pod install",
-    "clear": "watchman watch-del-all && rm -rf node_modules yarn.lock ios/Podfile.lock && yarn && npx pod-install && rm -rf /tmp/metro-*"
+    "clear": "watchman watch-del-all && rm -rf node_modules yarn.lock ios/Podfile.lock && yarn && npx pod-install && rm -rf /tmp/metro-*",
+    "beta:android": "yarn run prebuild-android && cd android && bundle exec fastlane beta version:patch",
+    "beta:ios": "cd ios && bundle exec fastlane beta version:patch",
+    "beta:skip:android": "yarn run prebuild-android && cd android && bundle exec fastlane beta version:skip",
+    "beta:skip:ios": "cd ios && bundle exec fastlane beta version:skip",
+    "beta": "yarn run beta:android && yarn run beta:ios",
+    "beta:skip": "yarn run beta:skip:android && yarn run beta:skip:ios",
+    "release:android": "yarn run prebuild-android && cd ./android && bundle exec fastlane release version:patch",
+    "release:ios": "cd ios && bundle exec fastlane release version:patch",
+    "release": "yarn run release:android && yarn run release:ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",

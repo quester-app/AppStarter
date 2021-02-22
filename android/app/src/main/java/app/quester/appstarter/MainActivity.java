@@ -1,4 +1,4 @@
-package com.appstarter;
+package app.quester.appstarter;
 
 import android.os.Bundle;
 
