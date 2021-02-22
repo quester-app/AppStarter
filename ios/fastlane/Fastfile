@@ -1,0 +1,106 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  def updateVersion(options)
+    if options[:version]
+      version = options[:version]
+    else
+      version = prompt(text: "Enter the version type or specific version\n(major, minor, patch or 1.0.0): ")
+    end
+
+    re = /\d+.\d+.\d+/
+    versionNum = version[re, 0]
+
+    if (versionNum)
+      increment_version_number(
+        version_number: versionNum
+      )
+      increment_build_number(xcodeproj: "AppStarter.xcodeproj")
+    elsif (version == 'major' || version == 'minor' || version == 'patch')
+      increment_version_number(
+        bump_type: version
+      )
+      increment_build_number(xcodeproj: "AppStarter.xcodeproj")
+    elsif (version == 'skip')
+    else
+      UI.user_error!("[ERROR] Wrong version")
+    end
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    run_tests(
+      workspace: "AppStarter.xcworkspace",
+      devices: ["iPhone 11"],
+      scheme: "AppStarter"
+    )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do |options|
+    cert
+    sigh(force: true)
+    updateVersion(options)
+
+    # update_project_team( # Set the right team on your project
+    #   teamid: CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+    # )
+    build_app(
+      workspace: "AppStarter.xcworkspace",
+      scheme: "AppStarter",
+    )
+    upload_to_testflight
+  end
+
+  desc "Push a new release build to the App Store"
+  lane :release do |options|
+    cert
+    sigh(force: true)
+    release_note = prompt(text: "Enter the release note: ")
+    if (release_note == '')
+      UI.user_error!("[ERROR] Wrong release note")
+    end
+    updateVersion(options)
+
+    build_app(workspace: "AppStarter.xcworkspace", scheme: "AppStarter")
+    # update_project_team( # Set the right team on your project
+    #   teamid: CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+    # )
+    upload_to_app_store(
+      force: true,
+      reject_if_possible: true,
+      skip_metadata: false,
+      skip_screenshots: true,
+      languages: ['ko'],
+      release_notes: {
+        "default" => release_note,
+        "ko" => release_note
+      },
+      submit_for_review: true,
+      automatic_release: true,
+      submission_information: {
+        add_id_info_uses_idfa: true,
+        add_id_info_serves_ads: true,
+        add_id_info_tracks_install: true,
+        add_id_info_tracks_action: false,
+        add_id_info_limits_tracking: true,
+        export_compliance_encryption_updated: false,
+      }
+    )
+  end
+end

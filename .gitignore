@@ -55,9 +55,22 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
+*/fastlane/README.md
+*/vendor/**
+*/Gemfile.lock
 
 # Bundle artifact
 *.jsbundle
 
 # CocoaPods
 /ios/Pods/
+
+# Android Keys
+/android/key.json
+
+# fastlane
+ios/*.mobileprovision
+ios/*.cer
+ios/*.certSigningRequest
+ios/*.p12
+ios/*.dSYM.zip
