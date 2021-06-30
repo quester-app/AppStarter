@@ -1,4 +1,11 @@
 {
   "name": "AppStarter",
-  "displayName": "AppStarter"
+  "displayName": "AppStarter",
+  "expo": {
+    "scheme": "starter",
+    "ios": {
+      "bundleIdentifier": "app.quester.AppStarter",
+      "googleServicesFile": "./GoogleService-info.plist"
+    }
+  }
 }

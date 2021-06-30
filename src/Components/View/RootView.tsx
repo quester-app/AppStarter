@@ -12,7 +12,7 @@ export default (props: Props): React.ReactElement => {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <View collapsable={false} pointerEvents="box-none" fill safe>
         <View fill keyboardAvoiding>
           {children}

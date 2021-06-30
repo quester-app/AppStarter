@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import FirebaseAnalytics from '@react-native-firebase/analytics';
 import {
   InitialState,
   NavigationContainer,
@@ -35,7 +36,10 @@ const analytics = () => ({
     screenName?: string;
     screenClass?: string;
   }) => {
-    console.log(screenName, screenClass);
+    FirebaseAnalytics().logScreenView({
+      screen_name: screenName,
+      screen_class: screenClass,
+    });
   },
 });
 
