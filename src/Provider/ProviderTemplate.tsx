@@ -10,7 +10,7 @@ type Context = {};
 
 const [useContext, Provider] = createContext<Context>();
 
-const TemplateProvider = (props: Props): React.ReactElement => {
+const TemplateProvider = (props: Props): React.ReactNode => {
   const {children} = props;
 
   const context = useMemo(() => ({}), []);
