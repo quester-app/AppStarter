@@ -9,6 +9,7 @@
     "test": "jest",
     "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx,js,jsx}\" --fix",
     "pod-install": "cd ios && pod install",
+    "pod-update": "cd ios && pod install --repo-update",
     "clear": "watchman watch-del-all && rm -rf node_modules yarn.lock ios/Podfile.lock && yarn && npx pod-install && rm -rf /tmp/metro-*",
     "beta:android": "yarn run prebuild-android && cd android && bundle exec fastlane beta version:patch",
     "beta:ios": "cd ios && bundle exec fastlane beta version:patch",
