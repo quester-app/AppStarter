@@ -1,0 +1,26 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.suggestionActions.enabled": false,
+  "search.exclude": {
+    "**/build/**": true,
+    "**/node_modules/**": true,
+    // "**/ios/**": true,
+    // "**/android/app/src/**": true,
+    "yarn.lock": true,
+    "**/vendor/**": true,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+}
