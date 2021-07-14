@@ -89,7 +89,7 @@ export default (): React.ReactElement | null => {
       onReady={() => {
         routeNameRef.current = navigationRef.current?.getCurrentRoute()?.name;
       }}
-      onStateChange={async (state) => {
+      onStateChange={async state => {
         AsyncStorage.setItem(NAVIGATION_PERSISTENCE_KEY, JSON.stringify(state));
 
         const previousRouteName = routeNameRef.current;
@@ -106,7 +106,7 @@ export default (): React.ReactElement | null => {
         routeNameRef.current = currentRouteName;
       }}
     >
-      <Stack.Navigator headerMode="float">
+      <Stack.Navigator headerMode="none">
         {stackScreens.map(([name, component]) => (
           <Stack.Screen key={name} component={component} name={name} />
         ))}

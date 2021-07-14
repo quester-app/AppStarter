@@ -202,6 +202,9 @@ type Props = React.ComponentProps<typeof Text> & {
   xxLarge?: boolean;
   xxxLarge?: boolean;
   xxxxLarge?: boolean;
+  // decoration
+  underline?: boolean;
+  color?: string;
 };
 
 export default (props: Props): React.ReactElement => {
@@ -224,6 +227,8 @@ export default (props: Props): React.ReactElement => {
     xxLarge,
     xxxLarge,
     xxxxLarge,
+    underline,
+    color: textColor,
     ...rest
   } = props;
 
@@ -251,11 +256,13 @@ export default (props: Props): React.ReactElement => {
         (xxxxLarge && FontSize.xxxxLarge) ||
         FontSize.Medium
     ];
-  const color = theme.colors.text;
+  const textDecorationLine = underline ? 'underline' : 'none';
+  const color = textColor || theme.colors.text;
 
   const style: TextStyle = {
     fontFamily,
     ...fontSize,
+    textDecorationLine,
     color,
   };
 
