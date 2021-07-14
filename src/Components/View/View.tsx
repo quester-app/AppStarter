@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-type Props = React.ComponentProps<typeof View> &
+export type Props = React.ComponentProps<typeof View> &
   React.ComponentProps<typeof SafeAreaView> &
   React.ComponentProps<typeof ScrollView> &
   React.ComponentProps<typeof KeyboardAvoidingView> & {

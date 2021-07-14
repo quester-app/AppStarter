@@ -23,7 +23,7 @@ export default (props: Props): React.ReactElement => {
   const [loading, setLoading] = useState(true);
 
   const reload = () => {
-    setWebviewKey((key) => key + 1);
+    setWebviewKey((key: number) => key + 1);
   };
 
   const onMessage = (e: WebViewMessageEvent) => {

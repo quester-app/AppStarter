@@ -1,5 +1,5 @@
 import * as SplashScreen from 'expo-splash-screen';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {LogBox} from 'react-native';
 import {enableScreens} from 'react-native-screens';
 
@@ -27,20 +27,29 @@ export default (): React.ReactElement | null => {
   useEffect(() => {
     const prepareResources = async () => {
       try {
+        await SplashScreen.preventAutoHideAsync();
         await restoreState();
+      } catch (e) {
+        // console.warn(e);
       } finally {
         setIsReady(true);
       }
     };
 
-    SplashScreen.preventAutoHideAsync().finally(() => prepareResources());
+    prepareResources();
   }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (isReady) {
+      await SplashScreen.hideAsync();
+    }
+  }, [isReady]);
 
   if (!isReady) return null;
 
   return (
     <RootProvider>
-      <RootView>
+      <RootView onLayout={onLayoutRootView}>
         <RootNavigator />
       </RootView>
     </RootProvider>
