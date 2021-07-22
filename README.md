@@ -14,7 +14,7 @@
 
 ## Setting up Gradle variables
 
-- Edit the file ~/.gradle/gradle.properties
+- Edit the file ./android/gradle.properties
 
 ```text
 RELEASE_STORE_FILE=release-key.keystore
