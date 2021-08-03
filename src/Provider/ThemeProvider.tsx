@@ -62,10 +62,10 @@ const ThemeProvider = (props: Props): React.ReactElement => {
     };
   }, []);
 
-  const context = useMemo(() => ({themeType, theme, setThemeType}), [
-    themeType,
-    theme,
-  ]);
+  const context = useMemo(
+    () => ({themeType, theme, setThemeType}),
+    [themeType, theme],
+  );
 
   return <Provider value={context}>{children}</Provider>;
 };

@@ -25,7 +25,6 @@ const RootScreens: {
   [RootStack.Home]: Screens.Home,
   [RootStack.Page2]: Screens.Page2,
   [RootStack.IdentityVerification]: Screens.IdentityVerification,
-  [RootStack.Chatbot]: Screens.Chatbot,
 };
 
 const analytics = () => ({

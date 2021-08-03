@@ -7,14 +7,12 @@ export type RootStackParamList = {
   [RootStack.Home]: undefined;
   [RootStack.Page2]: undefined;
   [RootStack.IdentityVerification]: undefined;
-  [RootStack.Chatbot]: undefined;
 } & {
   [P in keyof typeof RootStack]: undefined;
 };
 
-export type RootStackNavigationProps<
-  T extends keyof RootStackParamList
-> = StackNavigationProp<RootStackParamList, T>;
+export type RootStackNavigationProps<T extends keyof RootStackParamList> =
+  StackNavigationProp<RootStackParamList, T>;
 
 export type RootStackRouteProp<T extends keyof RootStackParamList> = RouteProp<
   RootStackParamList,
