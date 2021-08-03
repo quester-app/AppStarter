@@ -16,24 +16,25 @@ export default (): React.ReactElement => {
 
   // const [isLoading, setIsLoading] = useState(false);
   // const [posts, setPosts] = useState<Post[]>([]);
-  const {isLoading, value: posts, error} = usePromiseEffect<Post[]>(
-    ({fulfill, reject}) => {
-      const abortController = new AbortController();
-      fetchFunction<Post[]>({url: Posts.list, abortController})
-        .then((value) => fulfill(value))
-        .catch((e) => {
-          reject(e);
-          throw e;
-        });
+  const {
+    isLoading,
+    value: posts,
+    error,
+  } = usePromiseEffect<Post[]>(({fulfill, reject}) => {
+    const abortController = new AbortController();
+    fetchFunction<Post[]>({url: Posts.list, abortController})
+      .then(value => fulfill(value))
+      .catch(e => {
+        reject(e);
+        throw e;
+      });
 
-      return () => {
-        if (!abortController.signal.aborted) {
-          abortController.abort();
-        }
-      };
-    },
-    [],
-  );
+    return () => {
+      if (!abortController.signal.aborted) {
+        abortController.abort();
+      }
+    };
+  }, []);
 
   return (
     <>
