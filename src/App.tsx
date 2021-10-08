@@ -17,7 +17,7 @@ LogBox.ignoreLogs([
 
 enableScreens();
 
-export default (): React.ReactElement | null => {
+export default () => {
   const [isReady, setIsReady] = useState(false);
 
   const restoreState = async () => {

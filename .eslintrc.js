@@ -35,6 +35,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
