@@ -3,14 +3,15 @@ import {
   EffectCallback,
   Reducer as ReactReducer,
   useEffect,
+  useMemo,
   useReducer,
 } from 'react';
 
 enum ActionType {
-  START = 'start',
-  CANCEL = 'cancel',
-  FULFILL = 'fulfill',
-  REJECT = 'reject',
+  START = 'START',
+  CANCEL = 'CANCEL',
+  FULFILL = 'FULFILL',
+  REJECT = 'REJECT',
 }
 
 type Action<T> =
@@ -22,6 +23,19 @@ type Action<T> =
 //  & {meta: {counter: number; [meta: string]: any}};
 
 type State<T> = {isLoading: boolean; value?: T; error?: Error};
+
+type Reducer<T> = ReactReducer<State<T>, Action<T>>;
+// type ReducerOptions<T> = {
+//   reducer: <T>(state: State<T>, action: Action<T>) => State<T>;
+//   initialState: State<T>;
+// };
+
+type EffectAction<T> = {
+  start: () => void;
+  fulfill: (value: T) => void;
+  reject: (error: Error) => void;
+  cancel: () => void;
+};
 
 export const reducer = <T>(state: State<T>, action: Action<T>): State<T> => {
   switch (action.type) {
@@ -38,19 +52,6 @@ export const reducer = <T>(state: State<T>, action: Action<T>): State<T> => {
   }
 };
 
-type Reducer<T> = ReactReducer<State<T>, Action<T>>;
-type ReducerOptions<T> = {
-  reducer: <T>(state: State<T>, action: Action<T>) => State<T>;
-  initialState: State<T>;
-};
-
-type EffectAction<T> = {
-  start: () => void;
-  fulfill: (value: T) => void;
-  reject: (error: Error) => void;
-  cancel: () => void;
-};
-
 const initialState = {
   isLoading: false,
 };
@@ -59,18 +60,19 @@ export const usePromiseEffect = <T>(
   effect: (action: EffectAction<T>) => ReturnType<EffectCallback>,
   deps?: DependencyList,
 ): State<T> => {
-  const options: ReducerOptions<T> = {reducer, initialState};
-  const [state, dispatch] = useReducer<Reducer<T>>(
-    options.reducer,
-    options.initialState,
+  // const options: ReducerOptions<T> = {reducer, initialState};
+  const [state, dispatch] = useReducer<Reducer<T>>(reducer, initialState);
+  const action: EffectAction<T> = useMemo(
+    () => ({
+      start: () => dispatch({type: ActionType.START}),
+      fulfill: (value: T) =>
+        dispatch({type: ActionType.FULFILL, payload: value}),
+      reject: (error: Error) =>
+        dispatch({type: ActionType.REJECT, payload: error}),
+      cancel: () => dispatch({type: ActionType.CANCEL}),
+    }),
+    [],
   );
-  const action: EffectAction<T> = {
-    start: () => dispatch({type: ActionType.START}),
-    fulfill: (value: T) => dispatch({type: ActionType.FULFILL, payload: value}),
-    reject: (error: Error) =>
-      dispatch({type: ActionType.REJECT, payload: error}),
-    cancel: () => dispatch({type: ActionType.CANCEL}),
-  };
 
   useEffect(
     () => {
