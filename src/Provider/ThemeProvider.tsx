@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Theme as NavigationTheme} from '@react-navigation/native';
 import React, {useEffect, useMemo, useState} from 'react';
 import {Appearance, ColorSchemeName} from 'react-native';
