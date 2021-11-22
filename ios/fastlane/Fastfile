@@ -30,12 +30,12 @@ platform :ios do
       increment_version_number(
         version_number: versionNum
       )
-      increment_build_number(xcodeproj: "AppStarter.xcodeproj")
+      increment_build_number(xcodeproj: "Cowin.xcodeproj")
     elsif (version == 'major' || version == 'minor' || version == 'patch')
       increment_version_number(
         bump_type: version
       )
-      increment_build_number(xcodeproj: "AppStarter.xcodeproj")
+      increment_build_number(xcodeproj: "Cowin.xcodeproj")
     elsif (version == 'skip')
     else
       UI.user_error!("[ERROR] Wrong version")
@@ -45,9 +45,9 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
     run_tests(
-      workspace: "AppStarter.xcworkspace",
+      workspace: "Cowin.xcworkspace",
       devices: ["iPhone 11"],
-      scheme: "AppStarter"
+      scheme: "Cowin"
     )
   end
 
@@ -61,8 +61,8 @@ platform :ios do
     #   teamid: CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
     # )
     build_app(
-      workspace: "AppStarter.xcworkspace",
-      scheme: "AppStarter",
+      workspace: "Cowin.xcworkspace",
+      scheme: "Cowin",
     )
     upload_to_testflight
   end
@@ -77,7 +77,7 @@ platform :ios do
     end
     updateVersion(options)
 
-    build_app(workspace: "AppStarter.xcworkspace", scheme: "AppStarter")
+    build_app(workspace: "Cowin.xcworkspace", scheme: "Cowin")
     # update_project_team( # Set the right team on your project
     #   teamid: CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
     # )

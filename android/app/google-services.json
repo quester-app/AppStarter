@@ -1,50 +1,42 @@
 {
   "project_info": {
-    "project_number": "85016273994",
-    "project_id": "appstarter-6895d",
-    "storage_bucket": "appstarter-6895d.appspot.com"
+    "project_number": "696880700219",
+    "project_id": "cowin-a6b1a",
+    "storage_bucket": "cowin-a6b1a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:85016273994:android:131196e1f4453f0c8132b3",
+        "mobilesdk_app_id": "1:696880700219:android:bdb4e16d1746107cec351e",
         "android_client_info": {
-          "package_name": "app.quester.appstarter"
+          "package_name": "com.infrablockchain.cowin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "85016273994-38a5pnm724abf13dftng5cs6raf6fm77.apps.googleusercontent.com",
+          "client_id": "696880700219-f08l17eod63ej1spj430vt2stbckavhp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "app.quester.appstarter",
-            "certificate_hash": "0a378943f57f392920f298d59399567e63e22edc"
+            "package_name": "com.infrablockchain.cowin",
+            "certificate_hash": "1472bcc0460dd627e1a936045d4a0e65c6f9ca8f"
           }
         },
         {
-          "client_id": "85016273994-ri1dj8fe45ikotej0pk773eem7qhkf9s.apps.googleusercontent.com",
+          "client_id": "696880700219-14aktnrlei0724k4bg5taou6cj387hhk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBjMEqpRwtl98wUjmrPpHJIf-o4R1bxcfM"
+          "current_key": "AIzaSyBwOvfBAinNMufaUPjQADRSAL54CfHFS6I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "85016273994-ri1dj8fe45ikotej0pk773eem7qhkf9s.apps.googleusercontent.com",
+              "client_id": "696880700219-14aktnrlei0724k4bg5taou6cj387hhk.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "85016273994-fuedrgdsddafuuubee6oogt7huqvub9d.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "app.starter.AppStarter",
-                "app_store_id": "1554764925"
-              }
             }
           ]
         }

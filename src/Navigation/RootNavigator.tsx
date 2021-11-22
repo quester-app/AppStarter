@@ -11,6 +11,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import {Linking} from 'react-native';
 import '~/Navigation/GestureHandler';
 
+import BottomTabNavigator from './BottomTabNavigator';
+
 import {BackgroundLoader} from '~/Components';
 import {NAVIGATION_PERSISTENCE_KEY, RootStack} from '~/Constants';
 import {useThemeContext} from '~/Provider';
@@ -22,10 +24,22 @@ const Stack = createStackNavigator<RootStackParamList>();
 const RootScreens: {
   [P in keyof typeof RootStack]?: typeof Screens[keyof typeof Screens];
 } = {
-  [RootStack.Home]: Screens.Home,
+  [RootStack.InitialGuide]: Screens.InitialGuide,
+  [RootStack.TermsCheck]: Screens.TermsCheck,
+  [RootStack.UserCertificateCheck]: Screens.UserCertificateCheck,
+  [RootStack.UserCertificateGuide]: Screens.UserCertificateGuide,
+  [RootStack.UserCertificate]: Screens.UserCertificate,
+  [RootStack.PermissionGuide]: Screens.PermissionGuide,
+  // [RootStack.My]: Screens.My,
+  [RootStack.Home2]: Screens.Home2,
+  // [RootStack.Certificate]: Screens.Certificate,
   [RootStack.Page2]: Screens.Page2,
   [RootStack.IdentityVerification]: Screens.IdentityVerification,
   [RootStack.Chatbot]: Screens.Chatbot,
+  [RootStack.Main]: BottomTabNavigator,
+  [RootStack.NotificationSetting]: Screens.NotificationSetting,
+  [RootStack.PrivacyPolicy]: Screens.PrivacyPolicy,
+  [RootStack.ServiceTerms]: Screens.ServiceTerms,
 };
 
 const analytics = () => ({
@@ -106,7 +120,10 @@ export default (): React.ReactElement | null => {
         routeNameRef.current = currentRouteName;
       }}
     >
-      <Stack.Navigator headerMode="none">
+      <Stack.Navigator
+        headerMode="none"
+        initialRouteName={RootStack.InitialGuide}
+      >
         {stackScreens.map(([name, component]) => (
           <Stack.Screen key={name} component={component} name={name} />
         ))}

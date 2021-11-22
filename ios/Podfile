@@ -4,7 +4,7 @@ require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 platform :ios, '11.0'
 
-target 'AppStarter' do
+target 'Cowin' do
   use_unimodules!
   config = use_native_modules!
 
@@ -19,7 +19,7 @@ target 'AppStarter' do
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 
-  target 'AppStarterTests' do
+  target 'CowinTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -39,10 +39,10 @@ target 'AppStarter' do
   end
 end
 
-target 'AppStarter-tvOS' do
-  # Pods for AppStarter-tvOS
+target 'Cowin-tvOS' do
+  # Pods for Cowin-tvOS
 
-  target 'AppStarter-tvOSTests' do
+  target 'Cowin-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

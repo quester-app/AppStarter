@@ -64,6 +64,9 @@ buck-out/
 # Android Keys
 /android/key.json
 
+#Android release
+android/app/release/*
+
 # fastlane
 ios/*.mobileprovision
 ios/*.cer

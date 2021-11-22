@@ -1,4 +1,4 @@
-# AppStarter
+# Cowin App
 
 ## App Icon
 

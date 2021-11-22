@@ -28,7 +28,7 @@ export enum FontSize {
   xxxxLarge = 'xxxx-large',
 }
 
-const Family = {
+export const Family = {
   [FontFamily.Roboto]: {
     [FontWeight.Thin]: 'Roboto Thin',
     [FontWeight.Light]: 'Roboto Light',
@@ -39,7 +39,7 @@ const Family = {
   },
 };
 
-const Size = {
+export const Size = {
   [FontSize.xxSmall]: {
     fontSize: 12,
     lineHeight: 12 * 1.66, // 2.66(overline)

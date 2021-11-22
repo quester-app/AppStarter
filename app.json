@@ -1,10 +1,10 @@
 {
-  "name": "AppStarter",
-  "displayName": "AppStarter",
+  "name": "Cowin",
+  "displayName": "Cowin",
   "expo": {
-    "scheme": "starter",
+    "scheme": "cowin",
     "ios": {
-      "bundleIdentifier": "app.quester.AppStarter",
+      "bundleIdentifier": "com.infrablockchain.cowin",
       "googleServicesFile": "./GoogleService-info.plist"
     }
   }
