@@ -1,5 +1,5 @@
+import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {StatusBar} from 'react-native';
 
 import View from '~/Components/View/View';
 
@@ -12,7 +12,7 @@ export default (props: Props): React.ReactElement => {
 
   return (
     <>
-      <StatusBar barStyle="light-content" />
+      <StatusBar />
       <View collapsable={false} pointerEvents="box-none" fill safe {...remain}>
         <View fill keyboardAvoiding>
           {children}

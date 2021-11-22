@@ -1,11 +1,14 @@
+import Constants from 'expo-constants';
 import * as SplashScreen from 'expo-splash-screen';
 import React, {useCallback, useEffect, useState} from 'react';
 import {LogBox} from 'react-native';
 import {enableScreens} from 'react-native-screens';
 
-import {RootView} from '~/Components';
+import {RootView, Splash} from '~/Components';
 import RootNavigator from '~/Navigation/RootNavigator';
 import RootProvider from '~/Provider/RootProvider';
+
+// console.log(Constants.systemFonts);
 
 LogBox.ignoreLogs([
   // 'Warning: isMounted(...) is deprecated', // works
@@ -18,7 +21,7 @@ LogBox.ignoreLogs([
 enableScreens();
 
 export default () => {
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(true);
 
   const restoreState = async () => {
     //
@@ -29,8 +32,9 @@ export default () => {
       try {
         await SplashScreen.preventAutoHideAsync();
         await restoreState();
+        await new Promise(resolve => setTimeout(resolve, 2000));
       } catch (e) {
-        // console.warn(e);
+        console.warn(e);
       } finally {
         setIsReady(true);
       }
@@ -47,11 +51,15 @@ export default () => {
 
   if (!isReady) return null;
 
+  console.log(111);
+
   return (
     <RootProvider>
+      {/* <Splash> */}
       <RootView onLayout={onLayoutRootView}>
         <RootNavigator />
       </RootView>
+      {/* </Splash> */}
     </RootProvider>
   );
 };

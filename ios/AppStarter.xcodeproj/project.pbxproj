@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AppStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppStarterTests.m */; };
 		09315C0F95DD4D1E8DD334F7 /* roboto-v20-latin-700.woff in Resources */ = {isa = PBXBuildFile; fileRef = 0279438BD07F45AAB6DFD1C9 /* roboto-v20-latin-700.woff */; };
 		0EB055CA31DE4A8AA6C1F79E /* roboto-v20-latin-300.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6735FE4B2262410A9E53F392 /* roboto-v20-latin-300.woff2 */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -18,15 +17,12 @@
 		3E6083E347B54446B188B6BD /* roboto-v20-latin-100.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6E71BD6017DA4DE4A2207A26 /* roboto-v20-latin-100.woff */; };
 		4064746FBA2D4601AEBEAB18 /* roboto-v20-latin-regular.svg in Resources */ = {isa = PBXBuildFile; fileRef = C88A0A97BE6E4D38A151DCCA /* roboto-v20-latin-regular.svg */; };
 		445AAD909AECBA973D3B1F51 /* libPods-AppStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97721A1E16E433FFDAEC4182 /* libPods-AppStarter.a */; };
-		5C1366DF1163A4232EEB8C2B /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80D9BAD0D1C0CBB80312BD /* ExpoModulesProvider.swift */; };
 		5D5E330BC87A4AA5BE8F7221 /* roboto-v20-latin-regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1D70664C93B540B9BBBB9D17 /* roboto-v20-latin-regular.woff2 */; };
 		682449FCBC6843D18591E734 /* roboto-v20-latin-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71224E361B44825AD4AFE60 /* roboto-v20-latin-700.ttf */; };
 		68E2565032334F03A1C569C7 /* roboto-v20-latin-500.woff in Resources */ = {isa = PBXBuildFile; fileRef = 0DDA3B1415D6447596997B80 /* roboto-v20-latin-500.woff */; };
 		6DD24C09B9A448E3BFFB5FA8 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB307F3B4174906B7905952 /* SplashScreen.storyboard */; };
-		730FACD1CDFED3E818A76676 /* libPods-AppStarter-AppStarterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36235F6C8873DBF1060631 /* libPods-AppStarter-AppStarterTests.a */; };
 		79D019CB47474A44AC0EFAC4 /* roboto-v20-latin-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F04B5C4F4A45BB8072AB28 /* roboto-v20-latin-regular.ttf */; };
 		8134BEB024134EB6859C6380 /* roboto-v20-latin-100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 322461410666402E95920E0C /* roboto-v20-latin-100.ttf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85B1DCD9C6B84957807FF824 /* roboto-v20-latin-300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 397C295D613847FB8746E38F /* roboto-v20-latin-300.ttf */; };
 		90DEB9CBBD504B7A960DE5FB /* roboto-v20-latin-300.woff in Resources */ = {isa = PBXBuildFile; fileRef = C5B2CD27DCAD457487E70904 /* roboto-v20-latin-300.woff */; };
 		94560E686873478FB52E8B90 /* roboto-v20-latin-900.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB63D3C05A4009B48DBCBC /* roboto-v20-latin-900.svg */; };
@@ -41,6 +37,7 @@
 		E058859343E643349E5FFD6C /* roboto-v20-latin-500.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3A53940FB984702AC88C5B4 /* roboto-v20-latin-500.svg */; };
 		E86B2971208D0056AFF1369A /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78594D3D732625FC66D018 /* ExpoModulesProvider.swift */; };
 		F1136AD2C25847999D7DEFF5 /* roboto-v20-latin-100.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2CB0AB9971BF4563A34BDA09 /* roboto-v20-latin-100.svg */; };
+		F631206C2748E9BC002EDD03 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F631206B2748E9BC002EDD03 /* Expo.plist */; };
 		F631206E2748F077002EDD03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F631206D2748F077002EDD03 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +53,6 @@
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* AppStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AppStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStarterTests.m; sourceTree = "<group>"; };
 		0143AD8143954C9FB5C3F5DA /* roboto-v20-latin-700.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-700.woff2"; path = "../src/Assets/Fonts/roboto-v20-latin-700.woff2"; sourceTree = "<group>"; };
 		0279438BD07F45AAB6DFD1C9 /* roboto-v20-latin-700.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-700.woff"; path = "../src/Assets/Fonts/roboto-v20-latin-700.woff"; sourceTree = "<group>"; };
 		04D0F69967164A45B8B8C6AB /* roboto-v20-latin-regular.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-regular.woff"; path = "../src/Assets/Fonts/roboto-v20-latin-regular.woff"; sourceTree = "<group>"; };
@@ -77,14 +72,11 @@
 		322461410666402E95920E0C /* roboto-v20-latin-100.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-100.ttf"; path = "../src/Assets/Fonts/roboto-v20-latin-100.ttf"; sourceTree = "<group>"; };
 		35EE2A7A5FB34F67BB27F50E /* roboto-v20-latin-500.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-500.ttf"; path = "../src/Assets/Fonts/roboto-v20-latin-500.ttf"; sourceTree = "<group>"; };
 		397C295D613847FB8746E38F /* roboto-v20-latin-300.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-300.ttf"; path = "../src/Assets/Fonts/roboto-v20-latin-300.ttf"; sourceTree = "<group>"; };
-		4A36235F6C8873DBF1060631 /* libPods-AppStarter-AppStarterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppStarter-AppStarterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DFFEEFBE4247369B3DD266 /* roboto-v20-latin-300.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-300.svg"; path = "../src/Assets/Fonts/roboto-v20-latin-300.svg"; sourceTree = "<group>"; };
 		5B78594D3D732625FC66D018 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-AppStarter/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		5F47EC360BF9942F8CB5581F /* Pods-AppStarter-AppStarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStarter-AppStarterTests.release.xcconfig"; path = "Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests.release.xcconfig"; sourceTree = "<group>"; };
 		6735FE4B2262410A9E53F392 /* roboto-v20-latin-300.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-300.woff2"; path = "../src/Assets/Fonts/roboto-v20-latin-300.woff2"; sourceTree = "<group>"; };
 		6E71BD6017DA4DE4A2207A26 /* roboto-v20-latin-100.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-100.woff"; path = "../src/Assets/Fonts/roboto-v20-latin-100.woff"; sourceTree = "<group>"; };
 		7A201CCC446966D9ECC29974 /* Pods-AppStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStarter.release.xcconfig"; path = "Target Support Files/Pods-AppStarter/Pods-AppStarter.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AppStarter/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CDB63D3C05A4009B48DBCBC /* roboto-v20-latin-900.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-900.svg"; path = "../src/Assets/Fonts/roboto-v20-latin-900.svg"; sourceTree = "<group>"; };
 		97721A1E16E433FFDAEC4182 /* libPods-AppStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71224E361B44825AD4AFE60 /* roboto-v20-latin-700.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-700.ttf"; path = "../src/Assets/Fonts/roboto-v20-latin-700.ttf"; sourceTree = "<group>"; };
@@ -92,13 +84,12 @@
 		C5B2CD27DCAD457487E70904 /* roboto-v20-latin-300.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-300.woff"; path = "../src/Assets/Fonts/roboto-v20-latin-300.woff"; sourceTree = "<group>"; };
 		C88A0A97BE6E4D38A151DCCA /* roboto-v20-latin-regular.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-regular.svg"; path = "../src/Assets/Fonts/roboto-v20-latin-regular.svg"; sourceTree = "<group>"; };
 		CA7C1517E51B4ADAB047ADF3 /* roboto-v20-latin-500.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-500.woff2"; path = "../src/Assets/Fonts/roboto-v20-latin-500.woff2"; sourceTree = "<group>"; };
-		CD1DD1CB65BD20806A016E7C /* Pods-AppStarter-AppStarterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStarter-AppStarterTests.debug.xcconfig"; path = "Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D21ED6E258584E4ABB9F0C95 /* roboto-v20-latin-700.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-700.svg"; path = "../src/Assets/Fonts/roboto-v20-latin-700.svg"; sourceTree = "<group>"; };
 		EA3DE659EC78499FA5F844CE /* roboto-v20-latin-900.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-900.woff2"; path = "../src/Assets/Fonts/roboto-v20-latin-900.woff2"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EEB307F3B4174906B7905952 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = AppStarter/SplashScreen.storyboard; sourceTree = "<group>"; };
 		F3A53940FB984702AC88C5B4 /* roboto-v20-latin-500.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "roboto-v20-latin-500.svg"; path = "../src/Assets/Fonts/roboto-v20-latin-500.svg"; sourceTree = "<group>"; };
-		FD80D9BAD0D1C0CBB80312BD /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-AppStarter-AppStarterTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		F631206B2748E9BC002EDD03 /* Expo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Expo.plist; path = AppStarter/Supporting/Expo.plist; sourceTree = "<group>"; };
 		F631206D2748F077002EDD03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "AppStarter/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				730FACD1CDFED3E818A76676 /* libPods-AppStarter-AppStarterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,23 +112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AppStarterTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* AppStarterTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = AppStarterTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		05C85CDFAD004E08A4D90239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,12 +146,10 @@
 		13B07FAE1A68108700A75B9A /* AppStarter */ = {
 			isa = PBXGroup;
 			children = (
-				BFB9F83625ED0B5800DCBDB5 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				EEB307F3B4174906B7905952 /* SplashScreen.storyboard */,
 			);
@@ -190,7 +161,6 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				97721A1E16E433FFDAEC4182 /* libPods-AppStarter.a */,
-				4A36235F6C8873DBF1060631 /* libPods-AppStarter-AppStarterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,8 +170,6 @@
 			children = (
 				0DDC5015298AC7B6059F4DB1 /* Pods-AppStarter.debug.xcconfig */,
 				7A201CCC446966D9ECC29974 /* Pods-AppStarter.release.xcconfig */,
-				CD1DD1CB65BD20806A016E7C /* Pods-AppStarter-AppStarterTests.debug.xcconfig */,
-				5F47EC360BF9942F8CB5581F /* Pods-AppStarter-AppStarterTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,9 +184,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F631206D2748F077002EDD03 /* GoogleService-Info.plist */,
+				F631206B2748E9BC002EDD03 /* Expo.plist */,
 				13B07FAE1A68108700A75B9A /* AppStarter */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AppStarterTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				75358F4F70CA24A7298F8768 /* Pods */,
@@ -239,19 +208,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB6BD55AF99B8CCBC1343044 /* AppStarterTests */ = {
-			isa = PBXGroup;
-			children = (
-				FD80D9BAD0D1C0CBB80312BD /* ExpoModulesProvider.swift */,
-			);
-			name = AppStarterTests;
-			sourceTree = "<group>";
-		};
 		CAFC0EB41611D1C1521F0894 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
 				FFC48AB5BB790F25B478064E /* AppStarter */,
-				BB6BD55AF99B8CCBC1343044 /* AppStarterTests */,
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
@@ -271,12 +231,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppStarterTests" */;
 			buildPhases = (
-				8D1A549EEA6BBFBE6CB3FF83 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				35635ADF5161F2AFC92E7E49 /* [CP] Copy Pods Resources */,
-				C905EEAE97961675D448910D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +283,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 5T82SY258C;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -355,7 +312,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB9F83825ED0B5800DCBDB5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				F631206C2748E9BC002EDD03 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				F1136AD2C25847999D7DEFF5 /* roboto-v20-latin-100.svg in Resources */,
 				CCF0A9CFBBF546A99674B765 /* roboto-v20-latin-300.svg in Resources */,
@@ -428,23 +384,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStarter/Pods-AppStarter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		35635ADF5161F2AFC92E7E49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5441E8AA7B1C922DB758ED2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,45 +436,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D1A549EEA6BBFBE6CB3FF83 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppStarter-AppStarterTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C905EEAE97961675D448910D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStarter-AppStarterTests/Pods-AppStarter-AppStarterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,8 +462,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AppStarterTests.m in Sources */,
-				5C1366DF1163A4232EEB8C2B /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +488,6 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD1DD1CB65BD20806A016E7C /* Pods-AppStarter-AppStarterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -619,7 +516,6 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F47EC360BF9942F8CB5581F /* Pods-AppStarter-AppStarterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
