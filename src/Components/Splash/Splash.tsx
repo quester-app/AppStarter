@@ -3,7 +3,7 @@ import {Asset} from 'expo-asset';
 import Constants from 'expo-constants';
 import * as SplashScreen from 'expo-splash-screen';
 import React from 'react';
-import {Animated, Button, Platform, StyleSheet, Text, View} from 'react-native';
+import {Animated, StyleSheet, View} from 'react-native';
 
 import splashImage from '~/Assets/Images/splash.png';
 

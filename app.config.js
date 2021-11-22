@@ -1,29 +1,21 @@
-module.exports = ({...config}) => ({
+export default ({...config}) => ({
   ...config,
   name: 'AppStarter',
   displayName: 'AppStarter',
-  // expo: {
-  // name: 'AppStarter',
   slug: 'appstarter',
+  scheme: 'starter',
   version: '0.0.1',
   sdkVersion: '43.0.0',
   assetBundlePatterns: ['**/*'],
-  scheme: 'starter',
+  android: {
+    package: 'app.quester.AppStarter',
+  },
   ios: {
     bundleIdentifier: 'app.quester.AppStarter',
     googleServicesFile: './GoogleService-info.plist',
   },
-  // splash: {
-  //   image: './src/Assets/splash.png',
-  //   backgroundColor: '#ffff',
-  //   resizeMode: 'contain',
-  // },
-  // },
-  autolinking: {
-    exclude: ['expo-font'],
-  },
   splash: {
-    image: './src/Assets/favicon.png',
+    image: './src/Assets/splash.png',
     backgroundColor: '#f44335',
     resizeMode: 'cover',
   },
