@@ -28,10 +28,10 @@
         <data android:scheme="fb453466505854026"/>
       </intent-filter>
       <intent-filter android:autoVerify="true">
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="https" android:host="starter.quester.app" />
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="https" android:host="starter.quester.app"/>
       </intent-filter>
     </activity>
   </application>

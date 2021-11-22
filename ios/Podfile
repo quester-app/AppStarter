@@ -17,6 +17,7 @@ target 'AppStarter' do
     :hermes_enabled => podfile_properties['expo.jsEngine'] == 'hermes'
   )
 
+  $RNFirebaseAnalyticsWithoutAdIdSupport = true
   pod 'Firebase/Analytics'
   pod 'Firebase/DynamicLinks'
   # add pods for any other desired Firebase products

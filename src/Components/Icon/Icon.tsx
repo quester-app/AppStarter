@@ -2,7 +2,8 @@ import React from 'react';
 
 import IconMap from './IconMap';
 
-import {Svg, View} from '~/Components';
+import {Svg} from '~/Components/Svg';
+import {View} from '~/Components/View';
 
 type IconShapeType = 'filled' | 'outlined';
 
