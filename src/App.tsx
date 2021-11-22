@@ -10,7 +10,7 @@ import RootProvider from '~/Provider/RootProvider';
 LogBox.ignoreLogs([
   // 'Warning: isMounted(...) is deprecated', // works
   // 'Module RCTImageLoader', // works
-  'Require cycle: node_modules', // doesn't work
+  // 'Require cycle: node_modules', // doesn't work
   // 'Expected style',
   // 'componentWillMount',
 ]);
