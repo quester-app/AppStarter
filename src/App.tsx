@@ -14,6 +14,7 @@ LogBox.ignoreLogs([
   // 'Warning: isMounted(...) is deprecated', // works
   // 'Module RCTImageLoader', // works
   'Require cycle: node_modules', // doesn't work
+  'Overwriting fontFamily',
   // 'Expected style',
   // 'componentWillMount',
 ]);

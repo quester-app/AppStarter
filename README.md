@@ -10,7 +10,7 @@
 ## Splash Screen
 
 - yarn expo-splash-screen -h
-- ex) yarn expo-splash-screen -i ./src/Assets/Images/splash.png -b "#F44336" -r "cover"
+- ex) yarn expo-splash-screen -i ./src/Assets/Images/splash.png -b "#F44335" -r "cover"
 
 ## Setting up Gradle variables
 

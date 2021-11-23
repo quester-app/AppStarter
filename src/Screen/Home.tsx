@@ -2,6 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Button} from 'react-native';
 
+import LineLottie from '~/Assets/Lotties/LineLottie';
 import {BackgroundLoader, Portal, Text, View} from '~/Components';
 import {RootStack} from '~/Constants';
 import {Posts} from '~/Constants/API';
@@ -38,6 +39,7 @@ export default (): React.ReactElement => {
 
   return (
     <>
+      <LineLottie />
       {global.HermesInternal == null ? null : (
         <View style={{position: 'absolute', right: 0}}>
           <Text>Engine: Hermes</Text>
